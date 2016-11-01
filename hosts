@@ -1,0 +1,23 @@
+enterprise ansible_host=67.43.8.28 # enterprise.system.ht (TEST)
+
+[parents]
+jupiter ansible_host=67.227.240.220 # jupiter.system.ht
+saturn ansible_host=67.227.240.52 # saturn.system.ht
+
+[web_servers:children]
+prod_servers
+test_servers
+
+[db_servers]
+nasa ansible_host=67.227.240.128 # nasa.system.ht (InfluxDB)
+
+[app_servers]
+hubble ansible_host=67.227.240.127 # hubble.system.ht (Grafana)
+jpl ansible_host=67.227.240.131 # jpl.system.ht (Restyaboard)
+
+[prod_servers]
+discovery ansible_host=67.43.8.24 # discovery.system.ht (NGINX)
+
+[test_servers]
+challenger ansible_host=67.43.8.25 # challenger.system.ht (NGINX)
+endeavor ansible_host=67.43.8.26 # endeavor.system.ht (NGINX)

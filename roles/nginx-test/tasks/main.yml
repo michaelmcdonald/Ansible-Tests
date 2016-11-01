@@ -1,0 +1,9 @@
+---
+# tasks file for role
+- name: Copy NGINX configuration(s) in place.
+  template:
+    src: server_block.j2
+    dest: /etc/nginx/{{ item.server_name }}
+  with_items:
+    - "{{ ip_je_variables }}"
+    - "{{ ptr_je_variables }}"

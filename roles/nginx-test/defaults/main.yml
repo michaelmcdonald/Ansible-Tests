@@ -1,0 +1,13 @@
+---
+# defaults file for role
+ip_je_variables:
+  - name: ip_je
+    ipv6_addr: 2604:a880:800:10::da:a001
+    server_name: ip.je
+    root_dir: /var/www/ip.je/html
+
+ptr_je_variables:
+  - name: ptr_je
+    ipv6_addr: 2604:a880:800:10::da:a001
+    server_name: ptr.je
+    root_dir: /var/www/ptr.je/html
