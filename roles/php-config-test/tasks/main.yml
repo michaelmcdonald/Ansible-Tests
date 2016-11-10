@@ -1,0 +1,15 @@
+---
+# tasks file for php-config-test
+- name: Add timezone extension to PHP CLI .ini file
+  ini_file:
+    dest: /etc/php5/cli/php.ini
+    section: PHP
+    option: extension
+    value: timezonedb.so
+
+- name: Add timezone extension to PHP5 FPM .ini file
+  ini_file:
+    dest: /etc/php5/fpm/php.ini
+    section: PHP
+    option: extension
+    value: timezonedb.so
